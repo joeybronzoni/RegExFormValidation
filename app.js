@@ -1,4 +1,4 @@
-// Form blur event *means when the user clicks outside of the are
+
 document.getElementById('name').addEventListener('blur', validateName);
 
 document.getElementById('zipcode').addEventListener('blur', validateZip);
@@ -43,8 +43,6 @@ function validateEmail() {
 
 function validatePhone() {
   const phone = document.getElementById('phone');
-  /* the first group has the option of using () hence the ? but also note the \ as an escape char becuase we
-   want the () to be literal/actually present and the ? makes it optional */
   const regex = /^\(?\d{3}\)?[-. ]?\d{3}[-. ]?\d{4}$/;
 
   if (!regex.test(phone.value)) {
